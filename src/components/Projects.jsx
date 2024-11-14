@@ -20,6 +20,7 @@ const Projects = () => {
           <h4 className="subtitle" data-aos="fade-down">
             {Projects.subtitle}
           </h4>
+          <a href="projects.link">demo</a>
           <br />
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
@@ -46,9 +47,12 @@ const Projects = () => {
                 <img src={content.image} alt="..." />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
-                  <button className="font-bold text-gray self-end">
+                  <a
+                    className="font-bold text-gray self-end"
+                    href={content.link}
+                  >
                     READ MORE
-                  </button>
+                  </a>
                 </div>
               </SwiperSlide>
             ))}

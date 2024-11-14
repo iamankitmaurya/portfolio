@@ -1,7 +1,7 @@
-import { createElement, useRef } from "react";
-import { content } from "../Content";
 import emailjs from "@emailjs/browser";
+import { createElement, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { content } from "../Content";
 
 const Contact = () => {
   const { Contact } = content;
@@ -13,7 +13,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-      'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
       )
       .then(
         (result) => {
@@ -43,7 +46,6 @@ const Contact = () => {
         <br />
         <div className="flex gap-10 md:flex-row flex-col">
           <form
-            ref={form}
             onSubmit={sendEmail}
             data-aos="fade-up"
             className="flex-1 flex flex-col gap-5"
